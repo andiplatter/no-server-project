@@ -1,0 +1,35 @@
+/** {
+  border: 1px solid red;
+}*/
+.Story-container {
+  display: flex;
+  padding-top: 10px;
+  background: linear-gradient(
+    to bottom,
+    rgba(188, 192, 193, 0),
+    rgba(188, 192, 193, 1)
+  );
+}
+
+.Story-title {
+  flex: 1;
+  color: black;
+}
+
+.Story-thumbnail {
+  flex: 1;
+}
+
+.Story-author {
+  flex: 1;
+  padding-top: 45px;
+}
+
+.Story-url {
+  color: black;
+}
+
+.Story-image {
+  border-radius: 6px;
+  padding-bottom: 5px;
+}
