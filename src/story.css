@@ -14,22 +14,37 @@
 .Story-title {
   flex: 1;
   color: black;
+  font-family: 'Muli', sans-serif;
 }
 
 .Story-thumbnail {
-  flex: 1;
+  /*flex: 1;*/
+  padding: 5px;
+  border-radius: 6px;
 }
 
 .Story-author {
   flex: 1;
   padding-top: 45px;
+  font-family: 'Muli', sans-serif;
 }
 
 .Story-url {
   color: black;
+  float: left;
 }
 
 .Story-image {
-  border-radius: 6px;
-  padding-bottom: 5px;
+  border-radius: 9px;
+  float: left;
+  padding: 0 10px 10px 10px;
+}
+.Story-button {
+  height: 40px;
+  width: 75px;
+  background: red;
+  border-radius: 8px;
+  margin: 30px 10px 0 0;
+  font-family: 'Muli', sans-serif;
+  font-size: 13px;
 }

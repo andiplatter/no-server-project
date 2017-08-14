@@ -3,8 +3,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Search from './handlers/Search';
 import Bookmarks from './handlers/Bookmarks';
 import Profile from './handlers/Profile';
-
-const Home = () => <div>Home</div>;
+import Home from './handlers/Home';
 
 const BasicExample = () =>
   <Router>

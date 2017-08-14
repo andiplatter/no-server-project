@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../App.css';
-import axios from 'axios';
+import $ from 'jquery';
 import Story from '../components/Story';
 
 class Search extends Component {
@@ -36,8 +36,9 @@ class Search extends Component {
   }
   async fetchData(sub) {
     try {
-      const { data: { data: { children } } } = await axios.get(
-        `https://reddit.com/r/${sub}.json`
+      const { data: { children } } = await $.getJSON(
+        `https://reddit.com/r/${sub}.json?jsonp=?`,
+        data => data
       );
       return children;
     } catch (err) {

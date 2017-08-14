@@ -33,7 +33,7 @@ class Profile extends Component {
 
   submitProfile(e) {
     e.preventDefault();
-    this.props.saveProfile(this.state);
+    // this.props.saveProfile(this.state);
     this.setState({
       saved: true
     });
