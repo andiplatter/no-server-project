@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import '../Profile.css';
 
 class Profile extends Component {
   constructor(props) {
@@ -33,7 +34,8 @@ class Profile extends Component {
 
   submitProfile(e) {
     e.preventDefault();
-    // this.props.saveProfile(this.state);
+    localStorage.setItem('currentUser', JSON.stringify(this.state));
+    window.location.reload();
     this.setState({
       saved: true
     });
@@ -41,40 +43,41 @@ class Profile extends Component {
 
   render() {
     return (
-      <div className="profile-container">
-        <form className="profileBox" onSubmit={this.submitProfile}>
-          <div className="form-wrapper">
-            <p className="form-title">First Name:</p>
-            <input
-              type="text"
-              onChange={e => this.handleFirstName(e.target.value)}
-              value={this.state.firstName}
-            />
-          </div>
-          <div className="form-wrapper">
-            <p className="form-title">Last Name:</p>
-            <input
-              type="text"
-              onChange={e => this.handleLastName(e.target.value)}
-              value={this.state.lastName}
-            />
-          </div>
-          <div className="form-wrapper">
-            <p className="form-title">Email:</p>
-            <input
-              type="text"
-              onChange={e => this.handleEmail(e.target.value)}
-              value={this.state.email}
-            />
-          </div>
-          {this.state.saved
-            ? <Link to="/select">
-                <button className="save-button">Continue</button>
-              </Link>
-            : <button className="save-button" type="submit">
-                Save
-              </button>}
-        </form>
+      <div className="App">
+        <div className="App-header">
+          <h2>Profile</h2>
+        </div>
+        <div className="profile-container">
+          <form className="profileBox" onSubmit={this.submitProfile}>
+            <div className="form-wrapper">
+              <p className="form-title">First Name:</p>
+              <input
+                type="text"
+                onChange={e => this.handleFirstName(e.target.value)}
+                value={this.state.firstName}
+              />
+            </div>
+            <div className="form-wrapper">
+              <p className="form-title">Last Name:</p>
+              <input
+                type="text"
+                onChange={e => this.handleLastName(e.target.value)}
+                value={this.state.lastName}
+              />
+            </div>
+            <div className="form-wrapper">
+              <p className="form-title">Email:</p>
+              <input
+                type="text"
+                onChange={e => this.handleEmail(e.target.value)}
+                value={this.state.email}
+              />
+            </div>
+            <button className="save-button" type="submit">
+              Save
+            </button>
+          </form>
+        </div>
       </div>
     );
   }

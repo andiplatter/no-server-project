@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../App.css';
 import $ from 'jquery';
 import Story from '../components/Story';
+import '../Search.css';
 
 class Search extends Component {
   state = {
@@ -71,7 +72,7 @@ class Search extends Component {
               Subreddit: {this.state.subReddit}
             </h2>}
         </div>
-        {this.state.error && <p>Oopsie poopsie</p>}
+        {this.state.error && <p>Oopsie Poopsie</p>}
         {this.state.data.map((story, i) => {
           return (
             <Story

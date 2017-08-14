@@ -1,0 +1,60 @@
+.App-header h2 {
+  padding-top: 30px;
+  font-size: 30px;
+}
+
+.profile-container {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: gray;
+}
+.profileBox {
+  width: 50%;
+  background: rgba(255, 255, 255, .4);
+  display: flex;
+  flex-direction: column;
+  font-family: 'Raleway', sans-serif;
+  border-radius: 10px;
+  margin-top: -150px;
+}
+.form-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+.form-wrapper input {
+  width: 65%;
+}
+.form-title {
+  font-size: 20px;
+  color: black;
+}
+.profileBox input {
+  border: none;
+  border-bottom: 1px solid black;
+  background: rgba(255, 255, 255, 0);
+  font-size: 20px;
+}
+input:focus {
+  outline: none;
+  border-bottom: 1px solid blue;
+}
+button {
+  background: #2dc0f0;
+  border-radius: 6px;
+  border: none;
+}
+.bottom-box {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.save-button {
+  margin: 0 30px 10px 10px;
+  height: 40px;
+  width: 92px;
+  font-size: 18px;
+}
